@@ -102,6 +102,9 @@ http://localhost:8000/api/v1/getAllTask
 Filter
 ```bash
 status=pending
+```
+Response
+```bash
 [
     {
         "id": 4,
