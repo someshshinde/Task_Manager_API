@@ -68,7 +68,9 @@ run the following command
 
 ```bash
 http://localhost:8000/api/v1/createTask
-
+```
+Input Field
+```bash
 {
     "title":"test",
     "description":"Test description",
@@ -77,10 +79,58 @@ http://localhost:8000/api/v1/createTask
 
 }
 ```
+Response
+```bash
+{
+    "message": "Task Created Successfully",
+    "data": {
+        "id": 1,
+        "title": "test",
+        "description": "Test description",
+        "status": "pending",
+        "dueDate": "2025-04-30",
+        "updatedAt": "2025-04-23T07:36:05.426Z",
+        "created_at": "2025-04-23T07:36:05.426Z"
+    }
+}
+```
 <b>Get Task</b>
 
 ```bash
 http://localhost:8000/api/v1/getAllTask
+```
+Filter
+```bash
+status=pending
+[
+    {
+        "id": 4,
+        "title": "test",
+        "description": "Test description",
+        "status": "pending",
+        "dueDate": "2025-04-30",
+        "created_at": "2025-04-23T07:36:05.000Z",
+        "updatedAt": "2025-04-23T07:36:05.000Z"
+    },
+    {
+        "id": 2,
+        "title": "test",
+        "description": "Test description",
+        "status": "pending",
+        "dueDate": "2025-04-30",
+        "created_at": "2025-04-23T06:52:49.000Z",
+        "updatedAt": "2025-04-23T06:52:49.000Z"
+    },
+    {
+        "id": 1,
+        "title": "test",
+        "description": "Test description",
+        "status": "pending",
+        "dueDate": "2025-04-23",
+        "created_at": "2025-04-23T06:51:48.000Z",
+        "updatedAt": "2025-04-23T06:51:48.000Z"
+    }
+]
 ```
 
 <b>Status Count</b>
@@ -88,5 +138,17 @@ http://localhost:8000/api/v1/getAllTask
 ```bash
 http://localhost:8000/api/v1/statusCount
 ```
-
+Response
+```bash
+[
+    {
+        "status": "pending",
+        "count": 2
+    },
+    {
+        "status": "done",
+        "count": 1
+    }
+]
+```
 
