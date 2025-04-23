@@ -39,7 +39,13 @@ exports.statusCount=async(req,res)=>{
             attributes: ['status', [task.sequelize.fn('COUNT', task.sequelize.col('status')), 'count']],
             group: ['status']
         });
-        res.status(200).json(statusCount);
+        if (statusCount.length === 0) {
+            return res.status(404).json({ message: 'No tasks found' });
+        }else
+        {
+            res.status(200).json(statusCount);
+        }
+        
     } catch (err) {
         res.status(400).json({ error: err.message });
     }
