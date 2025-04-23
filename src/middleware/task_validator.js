@@ -1,5 +1,3 @@
-
-
 const inputValidator=(req,res,next)=>{
 
     const {title,description,status,dueDate}=req.body
