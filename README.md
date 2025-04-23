@@ -135,6 +135,25 @@ Response
     }
 ]
 ```
+Filter
+```bash
+status=done
+```
+Response
+```bash
+[
+    {
+        "id": 3,
+        "title": "test",
+        "description": "Test description",
+        "status": "done",
+        "dueDate": "2025-04-30",
+        "created_at": "2025-04-23T07:02:41.000Z",
+        "updatedAt": "2025-04-23T07:02:41.000Z"
+    }
+]
+```
+
 
 <b>Status Count</b>
 
