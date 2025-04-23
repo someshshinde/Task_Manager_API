@@ -32,3 +32,15 @@ exports.getAllTask=async(req,res)=>{
         res.status(400).json({ error: err.message });
     }
 }
+
+exports.statusCount=async(req,res)=>{
+    try {
+        const statusCount = await task.findAll({
+            attributes: ['status', [task.sequelize.fn('COUNT', task.sequelize.col('status')), 'count']],
+            group: ['status']
+        });
+        res.status(200).json(statusCount);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+}

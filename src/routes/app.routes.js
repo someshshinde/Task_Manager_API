@@ -6,7 +6,7 @@ const inputValidator= require('../middleware/validator')
 
 router.post('/createTask',inputValidator,taskAction.createTask)
 router.get('/getAllTask',taskAction.getAllTask)
-
+router.get('/statusCount',taskAction.statusCount)
 
 
 
