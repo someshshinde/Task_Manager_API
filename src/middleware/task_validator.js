@@ -1,3 +1,5 @@
+
+
 const inputValidator=(req,res,next)=>{
 
     const {title,description,status,dueDate}=req.body
@@ -25,4 +27,5 @@ const inputValidator=(req,res,next)=>{
     next()
 }
 
-module.exports=inputValidator
+
+module.exports={inputValidator}
