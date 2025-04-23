@@ -7,7 +7,10 @@ const inputValidator=(req,res,next)=>{
     if( !description){
         return res.status(400).json({error:'Description are required'})
     }
-   if(status && status!=='pending' && status!=='done'){
+    if(!status){    
+        return res.status(400).json({error:'Status are required'})
+    }
+   if(status!=='pending' && status!=='done'){
         return res.status(400).json({error:'Status should be either pending or done'})
     }
     if(!dueDate){
