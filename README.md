@@ -146,7 +146,7 @@ Response
 [
     {
         "status": "pending",
-        "count": 2
+        "count": 3
     },
     {
         "status": "done",
