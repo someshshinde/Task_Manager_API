@@ -24,7 +24,7 @@ const Task =db.define('task',{
         required:true
     },
     dueDate:{
-        type:DataTypes.DATE,
+        type:DataTypes.DATEONLY,
         required:true
     },
 },{
